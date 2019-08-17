@@ -11,4 +11,8 @@ var AnswerSchema = new Schema({
   }
 });
 
+AnswerSchema.virtual("answer").get(function() {
+  return this.answer;
+});
+
 module.exports = mongoose.model("Answer", AnswerSchema);
